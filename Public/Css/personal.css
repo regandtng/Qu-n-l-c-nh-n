@@ -1,0 +1,213 @@
+.page-personnal {
+    
+    align-items: center;
+   
+}
+.page-personnal li{
+    list-style: none;
+}
+.header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.header a {
+    font-size: 20px;
+    color: #666;
+}
+.avartar img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    margin-bottom: 20px;
+}
+.link-name {
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.link-name p {
+    margin-bottom: 10px;
+    font-size: 35px;
+    color: #000000;
+}
+.link-name a {
+    margin-top: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.personnal-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 35px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    width: 140%;
+    height: auto;
+}
+.personnal-info h2{
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.personnal-info p{
+    font-size: 35px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+/*-------------------------------------Phần AI làm ---------------------------------------*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, #e1b4e2, #d4a5d4);
+    color: white;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+}
+
+.close {
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.close:hover {
+    transform: rotate(90deg);
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-footer {
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+/* Form */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    padding-right: 45px; /* Thêm khoảng trống cho icon */
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #e1b4e2;
+}
+
+/* Icon toggle password - SỬA LẠI */
+.toggle-pass {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.togge-pass-hover {
+    color: #333;
+}
+/* Buttons */
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #e1b4e2, #d4a5d4);
+    color: white;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+    color: white;
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Messages */
+#message {
+    display: none;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+#message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}

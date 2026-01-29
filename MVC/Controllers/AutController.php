@@ -34,6 +34,8 @@ class AutController extends Controller {
                 $_SESSION['user']= $user;
                 echo "<script>window.location.replace('/Test/index.php?controller=AdminController&action=index');</script>";
                 exit();
+            } else {
+                echo "<script>alert('Đăng nhập thất bại! Vui lòng kiểm tra lại thông tin.');</script>";
             }
         }
         $this->View("Login");  // Đóng ngoặc function login()

@@ -39,7 +39,11 @@
                 if(isset($data['page']) && !empty($data['page'])){
                     require_once "./MVC/Views/Pages/" .$data['page'] .".php";
                 }else{
-                    echo "<h2>How are you today?</h2>";
+                    ?>
+                    <div class= "start">
+                        <h2>How are you today?</h2>
+                    </div>
+                <?php
                 }
                 ?>
             </div>

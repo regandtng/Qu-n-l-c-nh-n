@@ -22,7 +22,7 @@ body {
     overflow: hidden;
 }
 .menu {
-    background-color: #e1b4e2;
+    background-color: #c9a2ee;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     list-style: none;
     height: 70px;
@@ -31,25 +31,23 @@ body {
     gap: 10%;
     display: flex;
 }
-/* Hiệu ứng cho các icon ở menu ngang --------------------------------------*/
+/* Hiệu ứng cho các icon ở menu ngang */
 .menu li {
     font-size: 35px;
     transition: all 0.3s ease; /* Tạo độ mượt */
     cursor: pointer;
-    border-radius: 50%; /* Bo tròn để khi hover vào nhìn cân đối */
+    border-radius: 100%; /* Bo tròn để khi hover vào nhìn cân đối */
     padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-/* ÉP TOÀN BỘ ICON KHÔNG ĐỔI MÀU KHI CLICK --------------------------------------------*/
-.menu li a,
-.menu li a:visited,
-.menu li a:active,
 
 .menu li:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Nền trắng mờ nhẹ */
     transform: scale(1.2); /* Phóng to icon lên một chút */
-    color: #000000; /* Đổi màu icon sang trắng nếu muốn */
+    filter: brightness(1.2); /* Làm sáng icon */
+    color: #fff; /* Đổi màu icon sang trắng nếu muốn */
 }
 .content {
     display: flex;
@@ -89,7 +87,7 @@ body {
 }
 
 .infor-menu li:hover {
-    background-color: #e27a88 !important; /* Trắng rõ hơn */
+    background-color: #ffffff !important; /* Trắng rõ hơn */
     filter: brightness(1.05); /* Sáng hơn một chút */
     transform: translateX(10px); /* Dịch sang phải 10px tạo hiệu ứng tương tác */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
@@ -121,6 +119,5 @@ body {
     font-size: 30px;
     background-color: rgba(215, 173, 240, 0.8);
     border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(220, 97, 248, 0.25);
-
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 }

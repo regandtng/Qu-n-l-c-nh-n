@@ -23,18 +23,12 @@
                 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
                     <a class="forgot-password" >Quên mật khẩu ?</a>
                     
-                    <a class="forgot-password" href="/Test/index.php?controller=AutController&action=index">Đăng ký</a>
+                    <a class="forgot-password" href="/Test/index.php?controller=AutController&action=register">Đăng ký</a>
                     
                 </div>
             </div>
         </div>
     </div>
 </form>
-<script> 
-    function clearloginform(){
-        document.getElementById("login-username").value="";
-        document.getElementById("login-password").value="";
-    }                                                               
-</script>
 </body>
 </html>

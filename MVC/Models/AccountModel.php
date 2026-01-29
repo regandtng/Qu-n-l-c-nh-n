@@ -14,10 +14,10 @@ class AccountModel extends ConnectDB {
     }
      
 
-    public function createAccount($fullname,$username, $password, $email) {
-        $sql = "INSERT INTO accounts (fullname, username, password, email) VALUES (?, ?, ?, ?)";
+    public function createAccount($fullname,$username, $password, $email, $role) {
+        $sql = "INSERT INTO accounts (fullname, username, password, email, role) VALUES (?, ?, ?, ?, ?)";
         $stmt = $this->conn->prepare($sql);
-        $stmt->bind_param("ssss", $fullname, $username, $password, $email);
+        $stmt->bind_param("sssss", $fullname, $username, $password, $email, $role);
         return $stmt->execute();
     }
 }

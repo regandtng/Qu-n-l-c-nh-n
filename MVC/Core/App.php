@@ -19,7 +19,7 @@
             if(isset($_GET['action'])){
                 $this->action = $_GET['action'];
             }
-            Call_user_func([$this->controller, $this->action]);
+            call_user_func([$this->controller, $this->action]);
         }
 
     }

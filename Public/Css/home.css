@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    background-image: url('/TEST/Public/Picture/anh.jpg');
+    background-image: url('/Test/Public/Picture/anh.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -25,15 +25,15 @@ body {
     background-color: #e1b4e2;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     list-style: none;
-    height: 70px;
-    padding: 24px;
+    height: 50px;
+    padding: 15px;
     justify-content: center;
     gap: 10%;
     display: flex;
 }
 /* Hiệu ứng cho các icon ở menu ngang --------------------------------------*/
 .menu li {
-    font-size: 35px;
+    font-size: 20px;
     transition: all 0.3s ease; /* Tạo độ mượt */
     cursor: pointer;
     border-radius: 50%; /* Bo tròn để khi hover vào nhìn cân đối */
@@ -59,7 +59,7 @@ body {
 .infor {
     margin: 5px;
     padding: 20px;
-    width: 15%;
+    width: 20%;
     height: 100vh;
     background-color: rgba(185, 208, 238, 0.8);
     border-radius: 15px;
@@ -82,6 +82,7 @@ body {
     cursor: pointer;
     border: 1px solid transparent;
 
+    font-size: 10px;
     margin-bottom: 15px;
     padding: 10px 0;
     background-color:rgb(236, 244, 252);

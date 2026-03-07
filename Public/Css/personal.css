@@ -10,7 +10,7 @@
     display: flex;
     text-align: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 20px;
     margin-bottom: 30px;
     color: #333;
 }
@@ -20,10 +20,10 @@
     color: #666;
 }
 .avartar img{
-    width: 150px;
-    height: 150px;
+    width: 75px;
+    height: 75px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover; 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
     margin-bottom: 20px;
 }
@@ -37,11 +37,12 @@
     margin-left: 20px;
 }
 .link-name p {
-    margin-bottom: 10px;
-    font-size: 35px;
+   
+    font-size: 20px;
     color: #000000;
 }
 .link-name a {
+    font-size: 13px;
     margin-top: 5px;
     cursor: pointer;
     text-decoration: none;
@@ -56,15 +57,15 @@
 }
 .personnal-info h2{
     text-align: center;
-    font-size: 45px;
-    margin-bottom: 25px;
+    font-size: 25px;
+    margin-bottom: 10px;
     color: #333;
 }
 
 .personnal-info p{
-    font-size: 35px;
-    margin-top: 20px;
-    margin-left: 25px;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
 }
 /*-------------------------------------Phần AI làm ---------------------------------------*/
 .modal {
@@ -81,8 +82,8 @@
 .modal-content {
     background: white;
     margin: 5% auto;
-    width: 90%;
-    max-width: 600px;
+    width: 70%;
+    max-width: 400px;
     border-radius: 15px;
     box-shadow: 0 5px 30px rgba(0,0,0,0.3);
 }
@@ -90,59 +91,62 @@
 .modal-header {
     background: linear-gradient(135deg, #e1b4e2, #d4a5d4);
     color: white;
-    padding: 20px;
-    border-radius: 15px 15px 0 0;
+    border-radius: 10px 10px 0 0;
+    padding:10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .modal-header h2 {
+    padding-left: 5px;
     margin: 0;
+    font-size: 25px;
 }
 
 .close {
-    font-size: 35px;
+    font-size: 30px;
     cursor: pointer;
 }
 
 .close:hover {
     transform: rotate(90deg);
 }
-
 .modal-body {
-    padding: 25px;
+    padding-top: 10px;
 }
-
 .modal-footer {
-    padding: 20px;
-    border-top: 1px solid #ddd;
+    padding: 5px;
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 5px;
 }
 
 /* Form */
 .form-group {
-    margin-bottom: 20px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-bottom: 5px;
     position: relative;
 }
 
 .form-group label {
+    padding-top: 3px;
     display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+    margin-bottom: 3px;
+    font-weight:bold ;
+    font-size:20px;
 }
 
 .form-group input {
     width: 100%;
-    padding: 12px;
-    padding-right: 45px; /* Thêm khoảng trống cho icon */
+    padding: 5px;
+    padding-right: 40px; /* Thêm khoảng trống cho icon */
     border: 2px solid #ddd;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: 20px;
 }
-
+   
 .form-group input:focus {
     outline: none;
     border-color: #e1b4e2;

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test dự án</title>
-    <link rel="stylesheet" href="/TEST/Public/Css/register.css">
+    <link rel="stylesheet" href="/Test/Public/Css/register.css">
 </head>
 <body>
-    <form method="POST" action="/TEST/index.php?controller=AutController&action=register">
+    <form method="POST" action="/Test/index.php?controller=AutController&action=register">
     <div class="container">
      <div class="register" >
             <div class="form-group">
@@ -30,7 +30,7 @@
                 <button type="submit" >Register</button>  
             </div>
             <div>
-                <a class="forgot-password" href="/TEST/index.php?controller=AutController&action=index">Back</a>
+                <a class="forgot-password" href="/Test/index.php?controller=AutController&action=index">Back</a>
             </div>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/TEST/Public/Css/personal.css">
+<link rel="stylesheet" href="/Test/Public/Css/personal.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <div class="page-personnal">
     <!-- Header -->
@@ -86,11 +86,6 @@ function closeModal() {
     document.getElementById('editModal').style.display = 'none';
 }
 
-window.onclick = function(event) {
-    if (event.target == document.getElementById('editModal')) {
-        closeModal();
-    }
-}
 
 function togglePassword() {
     const input = document.getElementById('password');

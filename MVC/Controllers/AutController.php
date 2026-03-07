@@ -2,9 +2,6 @@
 class AutController extends Controller {
     private $account;
     public function index() {
-        if(session_status() == PHP_SESSION_NONE) {
-            session_start();
-        }
         if (isset($_SESSION['user'])) {
             echo "<script>window.location.replace('/Test/index.php?controller=HomeController&action=index');</script>";
             exit();
@@ -17,7 +14,7 @@ class AutController extends Controller {
     }
 
     public function login() {
-        if($_SERVER['REQUEST_METHOD']=='POST') {  // Thêm dấu { ở đây
+        if($_SERVER['REQUEST_METHOD']=='POST') {
 
             $Username = $_POST['username']??'';
             $Password = $_POST['password']??'';
@@ -25,12 +22,10 @@ class AutController extends Controller {
             $user = $this->account->getAccount($Username);
 
             if($user && password_verify($Password, $user['password']) && ($user['role'] == 'user' || $user['role'] == '')) {
-                session_start();
                 $_SESSION['user'] = $user;
                 echo "<script>window.location.replace('/Test/index.php?controller=HomeController&action=index');</script>";
                 exit();
             } else if($user && password_verify($Password, $user['password']) && ($user['role'] == 'admin')){
-                session_start();
                 $_SESSION['user']= $user;
                 echo "<script>window.location.replace('/Test/index.php?controller=AdminController&action=index');</script>";
                 exit();
@@ -38,7 +33,7 @@ class AutController extends Controller {
                 echo "<script>alert('Đăng nhập thất bại! Vui lòng kiểm tra lại thông tin.');</script>";
             }
         }
-        $this->View("Login");  // Đóng ngoặc function login()
+        $this->View("Login"); 
     }
     
     public function register() {
@@ -67,7 +62,9 @@ class AutController extends Controller {
     }
     
     public function logout() {
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
         session_unset();
         session_destroy();
 

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/Test/Public/Css/login.css">
 </head>
 <body>
-    <form method="POST" action="/TEST/index.php?controller=AutController&action=login" autocomplete="off">
+    <form method="POST" action="/Test/index.php?controller=AutController&action=login" autocomplete="off">
     <div class="container">
         <div class="login">
             <div class="form-group">

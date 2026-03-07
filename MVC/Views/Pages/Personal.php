@@ -12,15 +12,25 @@
         </div>
     </div>
 
-    <!-- Thông tin cá nhân -->
-    <div class="personnal-info" onclick="openModal()">
-        <h2>Thông tin cá nhân <i class="fa-solid fa-pen-to-square"></i></h2>
-        <p><b>Họ và tên:</b> <?= $_SESSION['user']['fullname'] ?? 'Chưa cập nhật' ?></p>
-        <p><b>Email:</b> <?= $_SESSION['user']['email'] ?? 'Chưa cập nhật' ?></p>
-        <p><b>Username:</b> <?= $_SESSION['user']['username'] ?? 'Chưa cập nhật' ?></p>
-        <p><b>Password:</b> *******</p>
-        <p><b>Số điện thoại:</b> <?= $_SESSION['user']['phone'] ?? 'Chưa cập nhật' ?></p>
-        <p><b>Địa chỉ:</b> <?= $_SESSION['user']['address'] ?? 'Chưa cập nhật' ?></p>
+
+    <div class="Main-personal-1">
+        <!-- Thông tin cá nhân -->
+        <div class="personnal-info" onclick="openModal()">
+            <h2>Thông tin cá nhân <i class="fa-solid fa-pen-to-square"></i></h2>
+            <p><b>Họ và tên:</b> <?= $_SESSION['user']['fullname'] ?? 'Chưa cập nhật' ?></p>
+            <p><b>Email:</b> <?= $_SESSION['user']['email'] ?? 'Chưa cập nhật' ?></p>
+            <p><b>Username:</b> <?= $_SESSION['user']['username'] ?? 'Chưa cập nhật' ?></p>
+            <p><b>Password:</b> *******</p>
+            <p><b>Số điện thoại:</b> <?= $_SESSION['user']['phone'] ?? 'Chưa cập nhật' ?></p>
+            <p><b>Địa chỉ:</b> <?= $_SESSION['user']['address'] ?? 'Chưa cập nhật' ?></p>
+        </div>
+        <!--Liên kết tài khoản-->
+        <div class="account">
+            <h2> Tài khoản cá nhân </h2>
+            <p><i class="fa-brands fa-facebook"></i><b> Facebook:</b></p>
+            <p><img src="https://cdn-icons-png.flaticon.com/512/300/300221.png" width="23"><b> Google:</b></p>
+            <p><i class="fa-brands fa-apple"></i><b> Apple:</b></p>
+        </div>
     </div>
 </div>
 

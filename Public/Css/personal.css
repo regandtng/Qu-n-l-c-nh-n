@@ -47,12 +47,18 @@
     cursor: pointer;
     text-decoration: none;
 }
+
+.Main-personal-1 {
+    display: flex;
+    gap: 30px;
+    width:100%;
+
+}
 .personnal-info {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 35px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-    width: 140%;
     height: auto;
 }
 .personnal-info h2{
@@ -66,6 +72,35 @@
     font-size: 15px;
     margin-top: 10px;
     margin-left: 15px;
+}
+
+.account {
+    background-color: rgba(255,255,255,0.8);
+    padding:20px;
+    border-radius: 35px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+
+}
+.account h2 {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.account p {
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.fa-facebook {
+    font-size: 23px;
+    color:#0460f3;
+}
+.fa-apple {
+    font-size: 25px;
+    color: black;
 }
 /*-------------------------------------Phần AI làm ---------------------------------------*/
 .modal {

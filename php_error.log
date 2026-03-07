@@ -8,3 +8,9 @@
 [03-Feb-2026 08:51:31 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TEST\MVC\Controllers\AutController.php on line 28
 [03-Feb-2026 08:51:34 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TEST\MVC\Controllers\AutController.php on line 70
 [03-Feb-2026 08:51:43 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\TEST\MVC\Controllers\AutController.php on line 28
+[07-Mar-2026 15:58:32 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[07-Mar-2026 15:58:32 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16

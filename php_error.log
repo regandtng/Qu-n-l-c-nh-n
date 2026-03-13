@@ -14,3 +14,328 @@ Stack trace:
 #0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
 #1 {main}
   thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[08-Mar-2026 15:35:15 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:55:27 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:55:34 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:02 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:03 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:04 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:05 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, class HomeController does not have a method "schedule" in C:\xampp\htdocs\TEST\MVC\Core\App.php:22
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[09-Mar-2026 09:57:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:50 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:51 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:52 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 09:58:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "ScheduleController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[09-Mar-2026 10:01:44 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Schedule.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:01:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Schedule.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View('Schedule')
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:01:44 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Schedule.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:01:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Schedule.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View('Schedule')
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:01:44 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Schedule.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:01:44 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Schedule.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View('Schedule')
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:01:45 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Schedule.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:01:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Schedule.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View('Schedule')
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:01:45 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Schedule.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:01:45 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Schedule.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View('Schedule')
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:15 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:15 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Array.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Array.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View(Array)
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Array.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Array.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View(Array)
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Array.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Array.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View(Array)
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Array.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Array.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View(Array)
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Warning:  Array to string conversion in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Warning:  require_once(./MVC/Views/Array.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10
+[09-Mar-2026 10:04:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Views/Array.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\Controller.php:10
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\ScheduleController.php(12): Controller->View(Array)
+#1 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): ScheduleController->index()
+#2 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#3 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\Controller.php on line 10

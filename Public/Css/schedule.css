@@ -1,0 +1,54 @@
+.Page-Schedule{
+    width:100%;
+    height: 100%;
+    
+    font-family:Arial;
+    border:1px solid #d292d3;
+    border-radius:10px;
+    padding:15px;
+    background:#a4bdea;
+    box-shadow:  0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:10px;
+}
+
+.head button{
+    padding:5px 10px;
+    cursor:pointer;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.week{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    text-align:center;
+    font-weight:bold;
+    margin-top: 40px;
+    margin-bottom:5px;
+}
+.week div {
+    font-size:40px ;
+}
+
+.day{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+}
+
+.day div{
+    padding:10px;
+    text-align:center;
+    border:1px solid #a4bdea;
+}
+
+.today{
+    background:#6d6c6c;
+    color:white;
+    border-radius:6%;
+}

@@ -18,7 +18,7 @@
                 <i class="fa-solid fa-bell" title="Thông báo"></i></a></li>
             <li onclick="comic()"><a href = "#">
                 <i class="fa-solid fa-gamepad" title="Games"></i></a></li>
-            <li onclick="comic()"><a href = "#">
+            <li><a href ="/Test/index.php?controller=AiController&action=index">
                 <i class="fa-solid fa-robot" title="Ai"></i></a></li>
         </ul>
         <div class="content">

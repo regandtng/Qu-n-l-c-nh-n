@@ -355,3 +355,9 @@ Stack trace:
 [17-Mar-2026 08:10:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TEST\MVC\Controllers\AiController.php on line 47
 [17-Mar-2026 08:10:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TEST\MVC\Controllers\AiController.php on line 47
 [17-Mar-2026 08:10:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\TEST\MVC\Controllers\AiController.php on line 47
+[20-Mar-2026 01:30:14 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[20-Mar-2026 01:30:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16

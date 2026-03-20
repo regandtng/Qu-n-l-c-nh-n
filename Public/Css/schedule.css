@@ -1,54 +1,176 @@
-.Page-Schedule{
-    width:100%;
+.Page-Schedule {
+    width: 100%;
     height: 100%;
-    
-    font-family:Arial;
-    border:1px solid #d292d3;
-    border-radius:10px;
-    padding:15px;
-    background:#a4bdea;
-    box-shadow:  0 8px 32px rgba(0, 0, 0, 0.25);
+    font-family: Arial;
+    border: 1px solid #d292d3;
+    border-radius: 10px;
+    padding: 15px;
+    background: #a4bdea;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+ 
+    /* Dùng flex để kiểm soát chiều cao từng phần */
+    display: flex;
+    flex-direction: column;
 }
-
-.head{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:10px;
+ 
+/* ===== HEADER ===== */
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    margin-bottom: 6px;
 }
-
-.head button{
-    padding:5px 10px;
-    cursor:pointer;
+ 
+.head-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+ 
+.head-title h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1a2a4a;
+    margin: 0;
+    line-height: 1.1;
+}
+ 
+#lunarMonthYear {
+    font-size: 13px;
+    color: #3a4a6a;
+    opacity: 0.85;
+    letter-spacing: 0.3px;
+}
+ 
+.head button {
+    padding: 4px 10px;
+    cursor: pointer;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 18px;
+    border: 1px solid #b0b8cc;
+    background: rgba(255, 255, 255, 0.55);
+    color: #1a2a4a;
+    transition: background 0.15s;
+    flex-shrink: 0;
 }
-
-.week{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
-    text-align:center;
-    font-weight:bold;
-    margin-top: 40px;
-    margin-bottom:5px;
+ 
+.head button:hover {
+    background: rgba(255, 255, 255, 0.85);
 }
+ 
+/* ===== WEEKDAY HEADER ===== */
+.week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+ 
 .week div {
-    font-size:40px ;
+    font-size: 22px;
+    color: #1a2a4a;
+    padding: 4px 0;
 }
-
-.day{
-    display:grid;
-    grid-template-columns:repeat(7,1fr);
+ 
+ 
+/* ===== LƯỚI NGÀY — flex-grow để lấp đầy không gian còn lại ===== */
+.day {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);   /* luôn 6 hàng */
+    gap: 3px;
+    flex: 1;                               /* chiếm hết chiều cao còn lại */
+    min-height: 0;                         /* cho phép co lại trong flex */
 }
-
-.day div{
-    padding:10px;
-    text-align:center;
-    border:1px solid #a4bdea;
+ 
+/* ===== Ô NGÀY ===== */
+.day-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(164, 189, 234, 0.5);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.15);
+    cursor: default;
+    transition: background 0.15s;
+    overflow: hidden;
+    min-height: 0;     /* quan trọng: cho phép ô co lại */
 }
-
-.today{
-    background:#6d6c6c;
-    color:white;
-    border-radius:6%;
+ 
+.day-cell:hover:not(.empty) {
+    background: rgba(255, 255, 255, 0.35);
+}
+ 
+.day-cell.empty {
+    border-color: transparent;
+    background: transparent;
+}
+ 
+/* Dương lịch — to, đậm, nổi bật */
+.solar-day {
+    font-size: clamp(0.9rem, 1.8vw, 1.4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1a2a4a;
+}
+ 
+/* Âm lịch — nhỏ, mờ */
+.lunar-day {
+    font-size: clamp(0.55rem, 1vw, 0.72rem);
+    font-weight: 400;
+    color: #3a4a6a;
+    opacity: 0.78;
+    margin-top: 2px;
+    line-height: 1;
+}
+ 
+/* ===== HÔM NAY ===== */
+.day-cell.today {
+    background: #6d6c6c !important;
+    border-color: #555;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+ 
+.day-cell.today .solar-day {
+    color: #fff;
+}
+ 
+.day-cell.today .lunar-day {
+    color: rgba(255,255,255,0.82);
+    opacity: 1;
+}
+ 
+/* ===== CUỐI TUẦN ===== */
+.day-cell.weekend .solar-day {
+    color: #c0392b;
+}
+ 
+.day-cell.weekend.today .solar-day {
+    color: #ffcdd2;
+}
+ 
+/* ===== MÙNG 1 ÂM LỊCH ===== */
+.lunar-day.lunar-first {
+    color: #7b3f00;
+    opacity: 1;
+    font-weight: 600;
+}
+ 
+/* ===== TAG NHUẬN ===== */
+.leap-tag {
+    font-size: 0.5rem;
+    background: #c0392b;
+    color: #fff;
+    border-radius: 3px;
+    padding: 0 2px;
+    vertical-align: super;
+    margin-left: 1px;
 }

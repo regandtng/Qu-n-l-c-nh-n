@@ -19,7 +19,7 @@ body {
 .container {
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow: visible;
 }
 .menu {
     background-color: #e1b4e2;
@@ -33,6 +33,7 @@ body {
 }
 /* Hiệu ứng cho các icon ở menu ngang --------------------------------------*/
 .menu li {
+    position:relative;
     font-size: 20px;
     transition: all 0.3s ease; /* Tạo độ mượt */
     cursor: pointer;
@@ -41,13 +42,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 100; 
 }
 /* ÉP TOÀN BỘ ICON KHÔNG ĐỔI MÀU KHI CLICK --------------------------------------------*/
 .menu li a,
 .menu li a:visited,
 .menu li a:active,
 
-.menu li:hover {
+.menu li:hover .tooltip{
+    opacity:1;
     transform: scale(1.2); /* Phóng to icon lên một chút */
     color: #000000; /* Đổi màu icon sang trắng nếu muốn */
 }
@@ -55,6 +58,23 @@ body {
     display: flex;
     width: 100%;
     height: calc(100vh - 70px);
+}
+.tooltip{
+        white-space: nowrap;
+        position:absolute;
+        bottom:-25px;
+        left:50%;
+        transform:translateX(-50%);
+        background: rgba(255, 255, 255, 0.658);
+        color:white;
+        padding:4px 8px;
+        border-radius:5px;
+        font-size:12px;
+        opacity:0;
+        transition:0.2s;
+        white-space:nowrap;
+        z-index:9999;
+         pointer-events: none;
 }
 .infor {
     margin: 5px;
@@ -64,17 +84,19 @@ body {
     background-color: rgba(185, 208, 238, 0.8);
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* thêm */
 }
 
 .infor-menu {
     list-style: none;
     flex-direction: column;
     display: flex;
-    justify-content: space-around;
-    gap: 50%;
+    justify-content: flex-start;  /* đổi từ space-around */
+    gap: 0;                        /* đổi từ 50% */
     padding: 0;
     margin: 0;
-    
 }
 .infor-menu li {
 
@@ -90,12 +112,54 @@ body {
 }
 
 .infor-menu li:hover {
-    background-color: #e27a88 !important; /* Trắng rõ hơn */
+    background-color: #ffffff !important; /* Trắng rõ hơn */
     filter: brightness(1.05); /* Sáng hơn một chút */
     transform: translateX(10px); /* Dịch sang phải 10px tạo hiệu ứng tương tác */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
 }
-
+.logout-wrap {
+    margin-top: auto;
+    padding-top: 15px;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+ 
+.logout-btn {
+    display: flex;
+    align-items: center;
+    background-color: #ff1900;
+    border-radius: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+ 
+.logout-btn:hover {
+    background-color: #ff1900 !important;
+    transform: translateX(10px);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.05);
+}
+ 
+.logout-btn a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 10px;
+}
+ 
+.logout-btn i {
+    margin-right: 12px;
+    padding-left: 10px;
+    width: 20px;
+    text-align: center;
+    color: #ffffff;
+}
 .infor-menu li i {
     margin-right: 12px; 
     padding-left: 10px;
@@ -113,7 +177,6 @@ body {
     font-weight: bold;
 }
 .main {
-    overflow-y: auto;
     position: relative;
     display: flex;
     margin: 5px;
@@ -134,7 +197,7 @@ body {
     display:flex;
     align-items: center;
     justify-content: center;
-    font-size: 40px;
+    font-size: 38px;
     color: #333;
     font-weight: bold;
 }

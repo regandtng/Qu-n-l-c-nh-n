@@ -1,0 +1,22 @@
+.page-games {
+    width:100%;
+    height:100%;
+    display:flex;
+    overflow-y:auto;
+}
+
+.games-header {
+    width:100%;
+    display:flex;
+}
+.games-header p {
+    width:100%;
+    text-align: center;
+}
+.games-main {
+   flex:1;
+    padding:15px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}

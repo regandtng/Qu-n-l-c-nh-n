@@ -1,0 +1,38 @@
+.page-notification {
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+}
+.noti-header {
+    margin-bottom: 2%;
+    font-size: 40px;
+    flex-shrink: 0;
+    overflow:hidden;
+}
+
+.all {
+    border-radius: 10px;
+    background: #ffc7ff;
+    border: none;
+    font-size: 18px;
+    padding:7px;
+}
+
+.not-read {
+    border-radius: 10px;
+    background: #ffc7ff;
+    border: none;
+    font-size: 18px;
+    padding: 7px;
+}
+.noti-main {
+    flex:1;
+    overflow-y:auto;
+    padding:15px;
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}

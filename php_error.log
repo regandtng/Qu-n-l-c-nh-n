@@ -361,3 +361,218 @@ Stack trace:
 #0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
 #1 {main}
   thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[20-Mar-2026 10:27:22 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:56 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:27:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:28:14 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:28:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:28:15 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:28:16 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:28:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:28:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:28:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:28:17 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:30:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:30:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:30:34 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:30:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:30:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:30:35 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:30:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:30:36 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:31:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:31:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:31:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:31:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:31:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:31:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:31:59 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:32:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:32:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:32:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:32:00 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:32:01 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17
+[20-Mar-2026 10:32:08 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class "GamesController" not found in C:\xampp\htdocs\TEST\MVC\Core\App.php:17
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 17

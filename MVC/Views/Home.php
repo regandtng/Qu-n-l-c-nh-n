@@ -11,27 +11,34 @@
     <div class="container">
         <ul class="menu">
             <li><a href ="/Test/index.php?controller=HomeController&aaction=home">
-                <i class="fa-solid fa-home" title="Trang chủ"></i></a></li>
+                <i class="fa-solid fa-home"></i><span class="tooltip">Trang chủ</span></a></li>
             <li><a href ="/Test/index.php?controller=ScheduleController&action=index">
-                <i class="fa-solid fa-calendar" title="Lịch khóa biểu"></i></a></li>
-            <li onclick="comic()"><a href ="#">
-                <i class="fa-solid fa-bell" title="Thông báo"></i></a></li>
-            <li onclick="comic()"><a href = "#">
-                <i class="fa-solid fa-gamepad" title="Games"></i></a></li>
+                <i class="fa-solid fa-calendar"></i><span class="tooltip">Lịch</span></a></li>
+            <li><a href ="/Test/index.php?controller=NotificationController&action=index">
+                <i class="fa-solid fa-bell"></i><span class="tooltip">Thông báo</span></a></li>
+            <li><a href = "/Test/index.php?controller=GamesController&action=index">
+                <i class="fa-solid fa-gamepad"></i><span class="tooltip">Games</span></a></li>
             <li><a href ="/Test/index.php?controller=AiController&action=index">
-                <i class="fa-solid fa-robot" title="Ai"></i></a></li>
+                <i class="fa-solid fa-robot"></i><span class="tooltip">AI</span></a></li>
         </ul>
         <div class="content">
-            <div class="infor">
+            <div class="infor" style="display:flex; flex-direction:column;">
                 <ul class="infor-menu">
-                    <li><a href="/Test/index.php?controller=HomeController&action=personal"> <i class="fa-solid fa-user"></i>Thông tin cá nhân</a></li>
+                    <li><a href="/Test/index.php?controller=HomeController&action=personal">
+                        <i class="fa-solid fa-user"></i>Thông tin cá nhân</a></li>
                     <li onclick="comic()"><i class="fa-solid fa-image"></i>Ảnh</li>
                     <li onclick="comic()"><i class="fa-solid fa-share"></i>Chia sẻ</li>
                     <li onclick="comic()"><i class="fa-solid fa-heart"></i>Yêu thích</li>
                     <li onclick="comic()"><i class="fa-solid fa-comment"></i>Messenger</li>
                     <li onclick="comic()"><i class="fa-solid fa-cog"></i>Cài đặt</li>
-                    <li style="background-color: #d85252"><a href="/Test/index.php?controller=AutController&action=logout">
-                        <i class="fa-solid fa-sign-out-alt"></i>Đăng xuất</a></li>
+                </ul>
+
+                <ul class="logout-wrap">
+                    <li class="logout-btn">
+                        <a href="/Test/index.php?controller=AutController&action=logout">
+                            <i class="fa-solid fa-sign-out-alt"></i>Đăng xuất
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="main">

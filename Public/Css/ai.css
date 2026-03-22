@@ -10,7 +10,7 @@ height:100%;
 border-radius:20px;
 display:flex;
 flex-direction:column;
-overflow:hidden;
+overflow: clip;
 }
 
 /* vùng hiển thị chat */
@@ -41,6 +41,7 @@ border-radius:20px;
 .ai-input input{
 flex:1;
 background:rgb(230,227,227);
+min-width: 0; 
 padding:10px;
 border:none;
 outline:none;
@@ -119,7 +120,7 @@ padding:10px 15px;
 
 /* nút xóa */
 .clear-btn{
-background:#ff4d4f;
+background:#ff000d;
 color:white;
 border:none;
 padding:6px 14px;
@@ -130,6 +131,6 @@ transition:0.2s;
 }
 
 .clear-btn:hover{
-background:#d9363e;
+background:#ff000d;
 transform:scale(1.05);
 }

@@ -5,6 +5,15 @@
 
     </div>
     <div class="games-main">
+       
+            <ul class="mini_game">
+
+                <li class="caro">
+                    <a href="/Test/index.php?controller=GamesController&action=caro"></a>
+                </li>
+
+            </ul>
+        
 
     </div>
 </div>

@@ -1,0 +1,201 @@
+/* ══════════════════════════════════════════════
+   Friends.css
+   ══════════════════════════════════════════════ */
+ 
+.fr-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Syne', system-ui, sans-serif;
+  background: #f4f2ee;
+  overflow: hidden;
+}
+ 
+/* ── Tabs ───────────────────────────────────── */
+.fr-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 14px 20px 0;
+  background: #fff;
+  border-bottom: 1px solid #e2ded6;
+  flex-shrink: 0;
+}
+ 
+.fr-tab {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 18px;
+  border: none;
+  background: transparent;
+  font-family: 'Syne', system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #7a786f;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  position: relative;
+}
+.fr-tab:hover { color: #1e1d1b; }
+.fr-tab.active { color: #185fa5; border-bottom-color: #185fa5; }
+ 
+.fr-badge {
+  background: #e24b4a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+ 
+/* ── Panel ──────────────────────────────────── */
+.fr-panel {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+}
+.fr-panel::-webkit-scrollbar { width: 4px; }
+.fr-panel::-webkit-scrollbar-thumb { background: #e2ded6; border-radius: 4px; }
+ 
+/* ── Search bar ─────────────────────────────── */
+.fr-search-bar {
+  position: relative;
+  margin-bottom: 20px;
+}
+.fr-search-icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #7a786f;
+  font-size: 14px;
+}
+.fr-search-input {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  border: 1px solid #e2ded6;
+  border-radius: 24px;
+  font-family: 'Syne', system-ui, sans-serif;
+  font-size: 14px;
+  background: #fff;
+  color: #1e1d1b;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.fr-search-input:focus {
+  border-color: #185fa5;
+  box-shadow: 0 0 0 3px rgba(24,95,165,0.1);
+}
+ 
+/* ── Section title ──────────────────────────── */
+.fr-section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e1d1b;
+  margin-bottom: 14px;
+  letter-spacing: -0.2px;
+}
+ 
+/* ── User grid ──────────────────────────────── */
+.fr-user-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+ 
+.fr-empty {
+  grid-column: 1/-1;
+  text-align: center;
+  color: #7a786f;
+  font-size: 14px;
+  padding: 40px 0;
+}
+ 
+/* ── Card ───────────────────────────────────── */
+.fr-card {
+  background: #fff;
+  border: 1px solid #e2ded6;
+  border-radius: 14px;
+  padding: 20px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  transition: box-shadow 0.15s;
+}
+.fr-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+ 
+.fr-card-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #185fa5;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+ 
+.fr-card-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e1d1b;
+  line-height: 1.3;
+  word-break: break-word;
+}
+.fr-card-user {
+  font-size: 12px;
+  color: #7a786f;
+  margin-bottom: 4px;
+}
+ 
+/* ── Buttons ────────────────────────────────── */
+.fr-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  margin-top: 4px;
+}
+ 
+.fr-btn {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Syne', system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background 0.12s, transform 0.08s;
+}
+.fr-btn:active   { transform: scale(0.97); }
+.fr-btn:disabled { opacity: 0.6; cursor: default; }
+ 
+.fr-btn-add    { background: #185fa5; color: #fff; }
+.fr-btn-add:hover { background: #0c447c; }
+ 
+.fr-btn-cancel { background: #f0eee9; color: #7a786f; }
+.fr-btn-cancel:hover { background: #e2ded6; }
+ 
+.fr-btn-accept { background: #1e7e34; color: #fff; }
+.fr-btn-accept:hover { background: #155724; }
+ 
+.fr-btn-friend { background: #e6f1fb; color: #185fa5; }
+.fr-btn-friend:hover { background: #d0e4f7; }

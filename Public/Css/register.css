@@ -78,3 +78,10 @@ button {
     text-decoration: none;
     cursor: pointer;
 }
+.error{
+    background:#ffdddd;
+    color:#c00;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:10px;
+}

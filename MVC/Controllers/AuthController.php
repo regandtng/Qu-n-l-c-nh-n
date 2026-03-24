@@ -1,5 +1,5 @@
 <?php
-class AutController extends Controller {
+class AuthController extends Controller {
     private $account;
     public function index() {
         if (isset($_SESSION['user'])) {
@@ -30,35 +30,26 @@ class AutController extends Controller {
                 echo "<script>window.location.replace('/Test/index.php?controller=AdminController&action=index');</script>";
                 exit();
             } else {
-                echo "<script>alert('Đăng nhập thất bại! Vui lòng kiểm tra lại thông tin.');</script>";
+                $error = "Sai tài khoản hoặc mật khẩu!";
             }
         }
-        $this->View("Login"); 
+        $this->View("Login", ['error'=>$error]); 
     }
     
-    public function register() {
-        if($_SERVER['REQUEST_METHOD'] == 'GET') {
-            $this->View("Register");
-            return;
-        }
+public function register() { 
+        if($_SERVER['REQUEST_METHOD'] == 'GET') { 
+            $this->View("Register"); return; } if($_SERVER['REQUEST_METHOD'] == 'POST') { 
+                $Fullname = $_POST['fullname']; $Email = $_POST['email']; 
+                $Username = $_POST['username']; $Password = password_hash($_POST['password'], PASSWORD_DEFAULT); 
+                $role = 'user'; $result = $this->account->createAccount($Fullname, $Username, $Password, $Email, $role); 
+                    if($result){ 
+                        $success = "Đăng ký thành công!";
+                        } else { 
+                            $error = "Đăng ký thất bại!"; } 
 
-        if($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-            $Fullname = $_POST['fullname'];
-            $Email = $_POST['email'];
-            $Username = $_POST['username'];
-            $Password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            $role = 'user';
-
-            $result = $this->account->createAccount($Fullname, $Username, $Password, $Email, $role);
             
-            if($result){
-                echo "<script>alert('Đăng ký thành công!');</script>";
-            } else {
-                echo "<script>alert('Đăng ký thất bại!');</script>";
-            }
-        }
-        $this->View("Register");
+       }
+                 $this->View("Login", ['error' => $error ?? '', 'success' => $success ?? '']);
     }
     
     public function logout() {
@@ -72,7 +63,7 @@ class AutController extends Controller {
         header("Pragma: no-cache"); 
         header("Expires: 0"); 
 
-        header("Location: /Test/index.php?controller=AutController&action=index");
+        header("Location: /Test/index.php?controller=AuthController&action=index");
         exit();
     }
 }

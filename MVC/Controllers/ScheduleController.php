@@ -2,7 +2,7 @@
     class ScheduleController extends Controller {
             public function index(){
             if(!isset($_SESSION['user'])) {
-                header("Location: /Test/index.php?controller=AutController&action=index");
+                header("Location: /Test/index.php?controller=AuthController&action=index");
                 exit();
             }
             header('cache-control: no-cache, no-store, must-revalidate');

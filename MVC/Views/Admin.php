@@ -25,7 +25,7 @@
                     <li onclick="comic()"><i class="fa-solid fa-share"></i>Quản lý Ảnh </li>
                     <li onclick="comic()"><i class="fa-solid fa-comment"></i>Messenger</li>
                     <li onclick="comic()"><i class="fa-solid fa-cog"></i>Cài đặt</li>
-                    <li style="background-color: #d85252"><a href="/Test/index.php?controller=AutController&action=logout">
+                    <li style="background-color: #d85252"><a href="/Test/index.php?controller=AuthController&action=logout">
                         <i class="fa-solid fa-sign-out-alt"></i>Đăng xuất</a></li>
                 </ul>
             </div>

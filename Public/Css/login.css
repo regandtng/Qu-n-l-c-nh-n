@@ -78,3 +78,18 @@ button {
     text-decoration: none;
     cursor: pointer;
 }
+.error{
+    background:#ffdddd;
+    color:#c00;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+.success{
+    background:#d4edda;
+    color:#155724;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:10px;
+    text-align:center;
+}

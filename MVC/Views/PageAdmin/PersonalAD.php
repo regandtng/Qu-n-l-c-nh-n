@@ -140,7 +140,7 @@ function confirmDelete() {
         .then(data => {
             if (data.success) {
                 alert('Tài khoản đã được xóa!');
-                window.location.href = '/Test/index.php?controller=AutController&action=index';
+                window.location.href = '/Test/index.php?controller=AuthController&action=index';
             } else {
                 alert(data.message);
             }

@@ -1,3 +1,8 @@
+<?php if(!empty($data['error'])): ?>
+    <div class="error">
+        <?= $data['error'] ?>
+    </div>
+<?php endif; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +12,7 @@
     <link rel="stylesheet" href="/Test/Public/Css/register.css">
 </head>
 <body>
-    <form method="POST" action="/Test/index.php?controller=AutController&action=register">
+    <form method="POST" action="/Test/index.php?controller=AuthController&action=register">
     <div class="container">
      <div class="register" >
             <div class="form-group">
@@ -30,7 +35,7 @@
                 <button type="submit" >Register</button>  
             </div>
             <div>
-                <a class="forgot-password" href="/Test/index.php?controller=AutController&action=index">Back</a>
+                <a class="forgot-password" href="/Test/index.php?controller=AuthController&action=index">Back</a>
             </div>
         </div>
     </div>

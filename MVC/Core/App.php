@@ -1,6 +1,6 @@
 <?php
     class App{
-        protected $controller = "AutController";
+        protected $controller = "AuthController";
         protected $action = "index";
 
         public function __construct(){

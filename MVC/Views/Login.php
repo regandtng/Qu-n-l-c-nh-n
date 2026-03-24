@@ -1,3 +1,16 @@
+
+<?php if(!empty($data['error'])): ?>
+    <div class="error">
+        <?= $data['error'] ?>
+    </div>
+<?php endif; ?>
+
+<?php if(!empty($data['success'])): ?>
+    <div class="success">
+        <?= $data['success'] ?>
+    </div>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +20,7 @@
     <link rel="stylesheet" href="/Test/Public/Css/login.css">
 </head>
 <body>
-    <form method="POST" action="/Test/index.php?controller=AutController&action=login" autocomplete="off">
+    <form method="POST" action="/Test/index.php?controller=AuthController&action=login" autocomplete="off">
     <div class="container">
         <div class="login">
             <div class="form-group">
@@ -22,7 +35,7 @@
                 <button type="submit">Login</button> 
                 <div style="display: flex; justify-content: space-between; margin-top: 10px;">
                     <a class="forgot-password" >Quên mật khẩu ?</a>
-                    <a class="forgot-password" href="/Test/index.php?controller=AutController&action=register">Đăng ký</a>
+                    <a class="forgot-password" href="/Test/index.php?controller=AuthController&action=register">Đăng ký</a>
                     
                 </div>
             </div>

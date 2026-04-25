@@ -114,15 +114,29 @@ body {
 .infor-menu li:hover {
     background-color: #ffffff !important; /* Trắng rõ hơn */
     filter: brightness(1.05); /* Sáng hơn một chút */
-    transform: translateX(10px); /* Dịch sang phải 10px tạo hiệu ứng tương tác */
+    transform: translateX(5px); /* Dịch sang phải 10px tạo hiệu ứng tương tác */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
 }
+
 .logout-wrap {
     margin-top: auto;
     padding-top: 15px;
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
+}
+
+.dark-light {
+    display: flex;
+    align-items: center;
+    background-color: #979494;
+    border-radius: 10px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    margin-bottom: 5%;
+    padding-left: 4%;
 }
  
 .logout-btn {
@@ -138,7 +152,7 @@ body {
  
 .logout-btn:hover {
     background-color: #ff1900 !important;
-    transform: translateX(10px);
+    transform: translateX(5px);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
     filter: brightness(1.05);
 }
@@ -208,4 +222,487 @@ body {
     line-height: 1.3;
     font-weight: bold;
     color: #333;
+}
+
+
+/* =============================================
+   DARK / LIGHT MODE — thêm vào cuối home.css
+   ============================================= */
+ 
+/* ── CSS Variables ── */
+:root {
+    --bg-main:    #e8e8f0;
+    --bg-sidebar: #dde0f0;
+    --bg-menu:    #c8cce8;
+    --bg-card:    rgba(255,255,255,0.85);
+    --bg-btn:     #ffffff;
+    --text:       #222222;
+    --text-sub:   #555555;
+    --text-link:  #444444;
+    --shadow:     rgba(0,0,0,0.15);
+    --border:     #cccccc;
+    --logout-bg:  #e53935;
+    --logout-txt: #ffffff;
+}
+ 
+html.dark-mode {
+    --bg-main:    #12121e;
+    --bg-sidebar: #1a1a2e;
+    --bg-menu:    #16213e;
+    --bg-card:    rgba(30,32,55,0.92);
+    --bg-btn:     #1e2040;
+    --text:       #e8e8f0;
+    --text-sub:   #aaaacc;
+    --text-link:  #ccccee;
+    --shadow:     rgba(0,0,0,0.5);
+    --border:     #333355;
+    --logout-bg:  #c62828;
+    --logout-txt: #ffffff;
+}
+ 
+/* ── Áp dụng biến vào toàn trang ── */
+html.dark-mode body {
+    background: var(--bg-main);
+    color: var(--text);
+}
+ 
+/* Menu ngang trên */
+html.dark-mode .menu {
+    background: var(--bg-menu) !important;
+}
+html.dark-mode .menu a,
+html.dark-mode .menu i {
+    color: var(--text) !important;
+}
+ 
+/* Sidebar trái */
+html.dark-mode .infor,
+html.dark-mode .content > .infor {
+    background: var(--bg-sidebar) !important;
+}
+html.dark-mode .infor-menu li,
+html.dark-mode .infor-menu li a,
+html.dark-mode .infor-menu i {
+    color: var(--text-link) !important;
+}
+html.dark-mode .infor-menu li:hover {
+    background: var(--bg-card) !important;
+}
+ 
+/* Khu vực main */
+html.dark-mode .main,
+html.dark-mode .container {
+    background: var(--bg-main) !important;
+}
+ 
+/* Cards (thông tin cá nhân, account, games...) */
+html.dark-mode .personnal-info,
+html.dark-mode .account,
+html.dark-mode .modal-content,
+html.dark-mode .msn-sidebar,
+html.dark-mode .msn-chat,
+html.dark-mode .fr-card,
+html.dark-mode .Page-Ai,
+html.dark-mode .ai-chatbox {
+    background: var(--bg-card) !important;
+    color: var(--text) !important;
+    box-shadow: 0 8px 32px var(--shadow) !important;
+}
+ 
+/* Text chung */
+html.dark-mode h2,
+html.dark-mode h3,
+html.dark-mode p,
+html.dark-mode b,
+html.dark-mode label,
+html.dark-mode span {
+    color: var(--text) !important;
+}
+ 
+/* Input fields */
+html.dark-mode input,
+html.dark-mode textarea {
+    background: #1e2040 !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+}
+html.dark-mode input::placeholder,
+html.dark-mode textarea::placeholder {
+    color: var(--text-sub) !important;
+}
+ 
+/* Modal */
+html.dark-mode .modal-body,
+html.dark-mode .modal-footer {
+    background: var(--bg-card) !important;
+}
+ 
+/* Messenger */
+html.dark-mode .msn-user-item:hover {
+    background: var(--bg-btn) !important;
+}
+html.dark-mode .msn-bubble {
+    background: #2a2d50 !important;
+    color: var(--text) !important;
+}
+html.dark-mode .msn-msg-mine .msn-bubble {
+    background: #4a3f7a !important;
+}
+html.dark-mode .msn-input-bar {
+    background: var(--bg-card) !important;
+    border-top: 1px solid var(--border) !important;
+}
+ 
+/* AI chat */
+html.dark-mode .ai-msg span {
+    background: #1e2245 !important;
+    color: var(--text) !important;
+}
+html.dark-mode .user-msg span {
+    background: #3d3470 !important;
+    color: #ffffff !important;
+}
+html.dark-mode .ai-input {
+    background: var(--bg-card) !important;
+    border-top: 1px solid var(--border) !important;
+}
+ 
+/* Lịch */
+html.dark-mode .Page-Schedule {
+    background: var(--bg-card) !important;
+    color: var(--text) !important;
+}
+html.dark-mode .day-cell {
+    background: var(--bg-btn) !important;
+    color: var(--text) !important;
+    border-color: var(--border) !important;
+}
+html.dark-mode .day-cell.today {
+    background: #4a3f7a !important;
+}
+html.dark-mode .head button {
+    background: var(--bg-btn) !important;
+    color: var(--text) !important;
+}
+ 
+/* Nút theme toggle */
+.theme-toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--text-link, #444);
+    transition: background 0.2s;
+    list-style: none;
+}
+.theme-toggle-btn:hover {
+    background: rgba(0,0,0,0.08);
+}
+html.dark-mode .theme-toggle-btn {
+    color: var(--text-link) !important;
+}
+html.dark-mode .theme-toggle-btn:hover {
+    background: rgba(255,255,255,0.08) !important;
+}
+ 
+/* Transition mượt khi đổi theme */
+*, *::before, *::after {
+    transition: background-color 0.3s ease, color 0.2s ease, border-color 0.3s ease;
+}
+/* =============================================
+   SIDEBAR TOGGLE
+   ============================================= */
+ 
+.sidebar-toggle {
+    align-self: flex-end;
+    background: rgba(255,255,255,0.6);
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-size: 12px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+.sidebar-toggle:hover {
+    background: #fff;
+    transform: scale(1.1);
+}
+ 
+/* Thu sidebar */
+.infor {
+    transition: width 0.3s ease, min-width 0.3s ease, padding 0.3s ease;
+    overflow: hidden;
+}
+.infor.collapsed {
+    width: 60px !important;
+    min-width: 60px !important;
+    padding: 10px 8px !important;
+}
+ 
+/* Ẩn text khi collapsed */
+.infor.collapsed .menu-text,
+.infor.collapsed #themeLabel {
+    display: none !important;
+}
+ 
+/* Căn icon vào giữa */
+.infor.collapsed .infor-menu li {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 12px 0 !important;
+}
+.infor.collapsed .infor-menu li a {
+    justify-content: center !important;
+    width: 100% !important;
+}
+.infor.collapsed .infor-menu li i {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+}
+ 
+/* Đăng xuất */
+.infor.collapsed .logout-btn {
+    justify-content: center !important;
+    padding: 10px 0 !important;
+}
+.infor.collapsed .logout-btn a {
+    justify-content: center !important;
+}
+.infor.collapsed .logout-btn i {
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 18px !important;
+}
+ 
+/* Dark mode toggle */
+.infor.collapsed .dark-light {
+    justify-content: center !important;
+    padding: 10px 0 !important;
+    padding-left: 0 !important;
+}
+.infor.collapsed .dark-light i {
+    font-size: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.infor.collapsed .sidebar-toggle {
+    align-self: center !important;
+}
+ 
+html.dark-mode .sidebar-toggle {
+    background: rgba(255,255,255,0.1) !important;
+    color: #dde3ff !important;
+}
+
+/* ── Fix icon sidebar dark mode ── */
+html.dark-mode .infor-menu li i {
+    color: #a0aaff !important;
+}
+html.dark-mode .infor-menu li:hover i {
+    color: #ffffff !important;
+}
+html.dark-mode .infor.collapsed .infor-menu li {
+    background-color: rgba(40, 45, 90, 0.8) !important;
+}
+html.dark-mode .infor.collapsed .infor-menu li:hover {
+    background-color: rgba(80, 90, 180, 0.7) !important;
+}
+html.dark-mode .infor.collapsed .logout-btn {
+    background-color: #c62828 !important;
+}
+html.dark-mode .infor.collapsed .dark-light {
+    background-color: rgba(40, 45, 90, 0.8) !important;
+}
+
+/* ── Fix màu chat AI dark mode ── */
+html.dark-mode #chat-box {
+    background: #0d0f1e !important;
+}
+
+/* Tin nhắn AI */
+html.dark-mode .ai-msg {
+    background: transparent !important;
+}
+html.dark-mode .ai-msg span {
+    background: #1e2255 !important;
+    color: #dde3ff !important;
+    border-radius: 12px !important;
+    padding: 10px 14px !important;
+    display: inline-block !important;
+    border-left: 3px solid #6366f1 !important;
+}
+
+/* Tin nhắn user */
+html.dark-mode .user-msg span {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+    color: #ffffff !important;
+    border-radius: 12px !important;
+    padding: 10px 14px !important;
+    display: inline-block !important;
+}
+
+/* Input bar */
+html.dark-mode .ai-input {
+    background: #13152e !important;
+    border-top: 1px solid #2a2f6a !important;
+}
+html.dark-mode .ai-input input {
+    background: #1a1d45 !important;
+    color: #dde3ff !important;
+    border: 1px solid #3a3f7a !important;
+    border-radius: 10px !important;
+}
+html.dark-mode .ai-input button {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 10px !important;
+}
+
+/* Header chat */
+html.dark-mode .chat-header {
+    background: #13152e !important;
+    border-bottom: 1px solid #2a2f6a !important;
+}
+html.dark-mode .clear-btn {
+    background: rgba(239, 68, 68, 0.2) !important;
+    color: #fca5a5 !important;
+    border: 1px solid rgba(239, 68, 68, 0.4) !important;
+    border-radius: 8px !important;
+}
+html.dark-mode .clear-btn:hover {
+    background: rgba(239, 68, 68, 0.4) !important;
+}
+/* ── Fix AI chat dark mode ── */
+html.dark-mode .ai-chatbox {
+    background: #0d1117 !important;
+    overflow: hidden !important;
+}
+
+html.dark-mode #chat-box {
+    background: #0d1117 !important;
+}
+
+/* Bubble AI */
+html.dark-mode .ai-msg span {
+    background: #1e2255 !important;
+    color: #dde3ff !important;
+    border: 1px solid #3a3f7a !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3) !important;
+    border-radius: 18px 18px 18px 4px !important;
+}
+
+/* Bubble user */
+html.dark-mode .user-msg span {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+    color: #ffffff !important;
+    border-radius: 18px 18px 4px 18px !important;
+}
+
+/* Input */
+html.dark-mode .ai-input {
+    background: #161b2e !important;
+    border-top: 1px solid #2a2f6a !important;
+    border-radius: 20px !important;
+}
+html.dark-mode .ai-input input {
+    background: #161b2e !important;
+    color: #dde3ff !important;
+}
+html.dark-mode .ai-input input::placeholder {
+    color: #6670a0 !important;
+}
+html.dark-mode .ai-input button {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed) !important;
+    color: white !important;
+}
+
+/* Header */
+html.dark-mode .chat-header {
+    background: #0d1117 !important;
+}
+html.dark-mode .clear-btn {
+    background: rgba(239,68,68,0.2) !important;
+    color: #fca5a5 !important;
+    border: 1px solid rgba(239,68,68,0.4) !important;
+}
+html.dark-mode .clear-btn:hover {
+    background: rgba(239,68,68,0.5) !important;
+}
+
+/* Fix góc nhọn khung main dark mode */
+html.dark-mode .main {
+    border-radius: 15px !important;
+    overflow: hidden !important;
+}
+
+html.dark-mode .ai-chatbox {
+    border-radius: 15px !important;
+    overflow: hidden !important;
+}
+
+html.dark-mode .Page-Ai {
+    border-radius: 15px !important;
+    overflow: hidden !important;
+}
+
+/* ── Icon sidebar dark mode đẹp hơn ── */
+html.dark-mode .infor-menu li {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark-mode .infor-menu li i {
+    color: #818cf8 !important;  /* tím xanh nhẹ */
+}
+
+html.dark-mode .infor-menu li a {
+    color: #c7d2fe !important;
+}
+
+html.dark-mode .infor-menu li:hover {
+    background-color: rgba(99, 102, 241, 0.25) !important;
+    border-color: rgba(99, 102, 241, 0.4) !important;
+    transform: translateX(6px) !important;
+}
+
+html.dark-mode .infor-menu li:hover i {
+    color: #a5b4fc !important;
+}
+
+/* Dark light button */
+html.dark-mode .dark-light {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    color: #c7d2fe !important;
+}
+html.dark-mode .dark-light i {
+    color: #fbbf24 !important;  /* vàng cho icon mặt trời/trăng */
+}
+html.dark-mode .dark-light span {
+    color: #c7d2fe !important;
+}
+
+/* Sidebar toggle button */
+html.dark-mode .sidebar-toggle {
+    background: rgba(99, 102, 241, 0.2) !important;
+    color: #818cf8 !important;
+    border: 1px solid rgba(99, 102, 241, 0.3) !important;
+}
+html.dark-mode .sidebar-toggle:hover {
+    background: rgba(99, 102, 241, 0.4) !important;
+    color: #ffffff !important;
 }

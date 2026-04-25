@@ -8,18 +8,54 @@ class AiController extends Controller {
             header("Location: /Test/index.php?controller=AuthController&action=index");
             exit();
         }
-
+ 
         header('cache-control: no-cache, no-store, must-revalidate');
         header('pragma: no-cache');
         header('expires: 0');
-
+ 
         $this->View("Home", ["page" => "Ai"]);
+    }
+ 
+    /**
+     * Tìm và đọc GEMINI_API_KEY từ nhiều nguồn khác nhau
+     */
+    private function getApiKey(): ?string {
+        // 1. Ưu tiên $_ENV và getenv() (nếu server hỗ trợ)
+        $key = $_ENV['GEMINI_API_KEY'] ?? getenv('GEMINI_API_KEY') ?? null;
+        if ($key) return $key;
+ 
+        // 2. Thử tìm file .env ở nhiều vị trí khác nhau
+        $possiblePaths = [
+            __DIR__ . '/../../.env',           // MVC/Controllers/ -> lên 2 cấp
+            __DIR__ . '/../../../.env',         // lên 3 cấp (phòng trường hợp cấu trúc khác)
+            $_SERVER['DOCUMENT_ROOT'] . '/.env',               // thư mục gốc web
+            $_SERVER['DOCUMENT_ROOT'] . '/Test/.env',          // /Test/.env
+            dirname($_SERVER['SCRIPT_FILENAME']) . '/.env',    // cùng thư mục index.php
+        ];
+ 
+        foreach ($possiblePaths as $path) {
+            $realPath = realpath($path);
+            if ($realPath && file_exists($realPath)) {
+                $lines = file($realPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+                foreach ($lines as $line) {
+                    $line = trim($line);
+                    if ($line === '' || $line[0] === '#') continue;
+                    if (strpos($line, '=') !== false) {
+                        [$k, $v] = explode('=', $line, 2);
+                        if (trim($k) === 'GEMINI_API_KEY') {
+                            return trim($v);
+                        }
+                    }
+                }
+            }
+        }
+ 
+        return null;
     }
  
     public function chat() {
         header("Content-Type: application/json");
  
-        // Nhận JSON body
         $input   = json_decode(file_get_contents("php://input"), true);
         $message = $input['message'] ?? '';
         $history = $input['history'] ?? [];
@@ -29,35 +65,19 @@ class AiController extends Controller {
             return;
         }
  
-        // Đọc API key từ .env
-        $apiKey  = null;
-        $envPath = "C:/xampp/htdocs/TEST/.env";
-        if (file_exists($envPath)) {
-            foreach (file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
-                if (strpos($line, '=') !== false) {
-                    [$key, $value] = explode('=', $line, 2);
-                    if (trim($key) === 'GEMINI_API_KEY') {
-                        $apiKey = trim($value);
-                        break;
-                    }
-                }
-            }
-        }
+        $apiKey = $this->getApiKey();
  
         if (!$apiKey) {
             echo json_encode(["reply" => "Chưa cấu hình GEMINI_API_KEY"]);
             return;
         }
  
-        // Model ổn định, key của bạn support
         $url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" . $apiKey;
  
-        // Giới hạn history 20 lượt
         if (count($history) > 20) {
             $history = array_slice($history, -20);
         }
  
-        // Ghép history + tin nhắn mới
         $contents   = $history;
         $contents[] = ["role" => "user", "parts" => [["text" => $message]]];
  
@@ -70,6 +90,7 @@ class AiController extends Controller {
             CURLOPT_HTTPHEADER     => ["Content-Type: application/json"],
             CURLOPT_POSTFIELDS     => $payload,
             CURLOPT_TIMEOUT        => 30,
+            CURLOPT_SSL_VERIFYPEER => false, // Một số shared hosting cần dòng này
         ]);
  
         $result   = curl_exec($ch);
@@ -85,7 +106,6 @@ class AiController extends Controller {
  
         $response = json_decode($result, true);
  
-        // Xử lý lỗi HTTP
         if ($httpCode !== 200) {
             $msg  = $response['error']['message'] ?? "Lỗi không xác định";
             $code = $response['error']['code']    ?? $httpCode;
@@ -103,3 +123,4 @@ class AiController extends Controller {
         echo json_encode(["reply" => $reply]);
     }
 }
+ 

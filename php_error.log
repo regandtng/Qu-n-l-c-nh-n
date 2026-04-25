@@ -4652,3 +4652,90 @@ Stack trace:
 #0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
 #1 {main}
   thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 22
+[01-Apr-2026 04:55:54 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[01-Apr-2026 04:55:54 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[07-Apr-2026 08:58:17 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [14] unable to open database file in C:\xampp\htdocs\TEST\MVC\Controllers\CaroController.php:435
+Stack trace:
+#0 C:\xampp\htdocs\TEST\MVC\Controllers\CaroController.php(435): PDO->__construct('sqlite:C:\\xampp...')
+#1 C:\xampp\htdocs\TEST\MVC\Controllers\CaroController.php(458): CaroController->getDB()
+#2 C:\xampp\htdocs\TEST\MVC\Controllers\CaroController.php(116): CaroController->clearHistory()
+#3 C:\xampp\htdocs\TEST\MVC\Core\App.php(22): CaroController->resetAll()
+#4 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#5 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Controllers\CaroController.php on line 435
+[14-Apr-2026 19:14:40 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:40 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(3): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:57 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:57 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:58 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:58 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:58 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:58 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:14:58 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:42 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:42 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:42 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:43 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:43 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:43 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:43 Europe/Berlin] PHP Warning:  require_once(./MVC/Controllers/Home?action=personal.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16
+[14-Apr-2026 19:15:43 Europe/Berlin] PHP Fatal error:  Uncaught Error: Failed opening required './MVC/Controllers/Home?action=personal.php' (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\TEST\MVC\Core\App.php:16
+Stack trace:
+#0 C:\xampp\htdocs\TEST\index.php(4): App->__construct()
+#1 {main}
+  thrown in C:\xampp\htdocs\TEST\MVC\Core\App.php on line 16

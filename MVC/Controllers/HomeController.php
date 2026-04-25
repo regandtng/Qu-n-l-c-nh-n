@@ -28,7 +28,7 @@ class HomeController extends Controller{
         header('pragma: no-cache');
         header('expires: 0');
         
-        $this->View("Home", ["page"=>"personal"]);    
+        $this->View("Home", ["page"=>"Personal"]);    
     }
     //-----------------------------------------------------Phần AI làm -------------------------------------------------------//    
 

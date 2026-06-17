@@ -243,3 +243,39 @@
 }
 .msn-send-btn:hover  { background: #0c447c; }
 .msn-send-btn:active { transform: scale(0.94); }
+
+
+
+/* 🌙 DARK MODE */
+.dark-mode .msn-chat {
+  background: #111827;
+}
+
+.dark-mode .msn-chat-header {
+  background: #1F2937;   /* đổi màu header */
+  border-bottom: 1px solid #374151;
+}
+
+.dark-mode .msn-chat-name {
+  color: #F9FAFB;
+}
+
+.dark-mode .msn-messages {
+  background: #111827;
+}
+
+.dark-mode .msn-msg-other .msn-bubble {
+  background: #1F2937;
+  color: #F9FAFB;
+}
+
+.dark-mode .msn-input-bar {
+  background: #1F2937;
+  border-top: 1px solid #374151;
+}
+
+.dark-mode .msn-input {
+  background: #111827;
+  color: #F9FAFB;
+  border: 1px solid #374151;
+}

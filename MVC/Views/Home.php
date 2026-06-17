@@ -7,7 +7,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/Test/Public/Css/home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Áp dụng theme TRƯỚC khi render → không bị chớp khi chuyển trang -->
     <script>
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark-mode');
@@ -39,7 +38,7 @@
  
                 <ul class="infor-menu">
                     <li><a href="/Test/index.php?controller=HomeController&action=personal">
-                        <i class="fa-solid fa-user"></i><span class="menu-text">Thông tin cá nhân</span></a></li>
+                        <i class="fa-solid fa-user"></i><span class="menu-text">Trang cá nhân</span></a></li>
                     <li onclick="comic()">
                         <i class="fa-solid fa-image"></i><span class="menu-text">Ảnh</span></li>
                     <li onclick="comic()">
@@ -107,6 +106,27 @@
         label.textContent = isDark ? 'Giao diện sáng' : 'Giao diện tối';
     }
  
+    function updateNotificationBadge() {
+        const raw = localStorage.getItem('scheduleNotes');
+        const notes = raw ? JSON.parse(raw) : [];
+        const unreadCount = notes.filter(note => !note.read && note.date && (() => {
+            const [year, month, day] = note.date.split('-').map(Number);
+            const [hours, minutes] = (note.notifyTime || note.time || '00:00').split(':').map(Number);
+            return new Date(year, month - 1, day, hours, minutes, 0, 0) <= new Date();
+        })()).length;
+        let badge = document.querySelector('.notification-badge');
+        if (!badge) {
+            const bellLink = document.querySelector('a[href="/Test/index.php?controller=NotificationController&action=index"]');
+            if (!bellLink) return;
+            badge = document.createElement('span');
+            badge.className = 'notification-badge';
+            bellLink.style.position = 'relative';
+            bellLink.appendChild(badge);
+        }
+        badge.textContent = unreadCount > 0 ? unreadCount : '';
+        badge.style.display = unreadCount > 0 ? 'inline-flex' : 'none';
+    }
+ 
     // ── Sidebar thu/mở ─────────────────────────────────────
     function toggleSidebar() {
         const sidebar = document.getElementById('sidebar');
@@ -132,6 +152,7 @@
                 updateSidebarIcon(true);
             }
         }
+        updateNotificationBadge();
     });
 </script>
 </html>

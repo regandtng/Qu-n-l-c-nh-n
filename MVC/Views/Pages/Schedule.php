@@ -21,15 +21,74 @@
     </div>
  
     <div class="day" id="calendarDays"></div>
+</div>
  
+<div class="note-modal" id="noteModal">
+    <div class="note-modal-backdrop"></div>
+    <div class="note-modal-content">
+        <h3 id="modalTitle">Thêm ghi chú</h3>
+        <form id="noteForm">
+            <input type="hidden" id="noteId">
+            <label for="noteTitle">Tiêu đề</label>
+            <input type="text" id="noteTitle" required maxlength="100" placeholder="Tiêu đề ghi chú">
+            <label for="noteDesc">Nội dung</label>
+            <textarea id="noteDesc" rows="5" required maxlength="300" placeholder="Mô tả chi tiết"></textarea>
+            <label for="noteTime">Giờ hẹn</label>
+            <input type="time" id="noteTime" required>
+            <label for="noteNotifyTime">Giờ thông báo</label>
+            <input type="time" id="noteNotifyTime" required>
+            <div class="modal-actions">
+                <button type="submit" class="save-btn">Lưu</button>
+                <button type="button" id="cancelNoteBtn" class="cancel-btn">Hủy</button>
+            </div>
+        </form>
+    </div>
 </div>
  
 <script>
     let currentDate = new Date();
+    const NOTE_STORAGE_KEY = 'scheduleNotes';
+    let selectedDate = null;
  
-    // =============================================
-    // THUẬT TOÁN ÂM LỊCH (Hồ Ngọc Đức)
-    // =============================================
+    function formatISODate(year, month, day) {
+        return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    }
+ 
+    function formatDisplayDate(iso) {
+        const [year, month, day] = iso.split('-');
+        return `${day}/${month}/${year}`;
+    }
+ 
+    function parseDateTime(date, time) {
+        const [year, month, day] = date.split('-').map(Number);
+        const [hours, minutes] = (time || '00:00').split(':').map(Number);
+        return new Date(year, month - 1, day, hours, minutes, 0, 0);
+    }
+ 
+    function isNoteDue(note) {
+        const now = new Date();
+        const dueTime = parseDateTime(note.date, note.notifyTime || note.time || '00:00');
+        return dueTime <= now;
+    }
+ 
+    function loadNotes() {
+        const raw = localStorage.getItem(NOTE_STORAGE_KEY);
+        return raw ? JSON.parse(raw) : [];
+    }
+ 
+    function saveNotes(notes) {
+        localStorage.setItem(NOTE_STORAGE_KEY, JSON.stringify(notes));
+    }
+ 
+    function getNotesByDate(date) {
+        return loadNotes().filter(note => note.date === date).sort((a, b) => a.createdAt - b.createdAt);
+    }
+ 
+    function setSelectedDate(date) {
+        selectedDate = date;
+        renderCalendar();
+    }
+ 
     function jdFromDate(dd, mm, yy) {
         var a = Math.floor((14 - mm) / 12);
         var y = yy + 4800 - a;
@@ -107,78 +166,177 @@
         return [lunarDay, lunarMonth, lunarYear, lunarLeap];
     }
  
-    // Tên Can Chi
     const CAN  = ["Giáp","Ất","Bính","Đinh","Mậu","Kỷ","Canh","Tân","Nhâm","Quý"];
     const CHI  = ["Tý","Sửu","Dần","Mão","Thìn","Tỵ","Ngọ","Mùi","Thân","Dậu","Tuất","Hợi"];
-    function canChi(year) { return CAN[(year+6)%10] + " " + CHI[(year+8)%12]; }
  
-    function getLunarDate(d, m, y) { return convertSolar2Lunar(d, m, y, 7); }
+    function canChi(year) {
+        return CAN[(year + 6) % 10] + ' ' + CHI[(year + 8) % 12];
+    }
  
-    // =============================================
-    // RENDER
-    // =============================================
+    function getLunarDate(d, m, y) {
+        return convertSolar2Lunar(d, m, y, 7);
+    }
+ 
     function renderCalendar() {
-        const daysContainer = document.getElementById("calendarDays");
-        const monthYear     = document.getElementById("monthYear");
-        const lunarHeader   = document.getElementById("lunarMonthYear");
+        const daysContainer = document.getElementById('calendarDays');
+        const monthYear = document.getElementById('monthYear');
+        const lunarHeader = document.getElementById('lunarMonthYear');
  
-        let year  = currentDate.getFullYear();
-        let month = currentDate.getMonth(); // 0-based
+        const year = currentDate.getFullYear();
+        const month = currentDate.getMonth();
  
-        // Dương lịch header
         monthYear.innerText = `Tháng ${month + 1} - ${year}`;
+        const lunarOf15 = getLunarDate(15, month + 1, year);
+        lunarHeader.innerHTML = `Tháng ${lunarOf15[1]} âm lịch &nbsp;·&nbsp; Năm ${canChi(lunarOf15[2])}`;
  
-        // Tính âm lịch của ngày 1 dương để lấy tháng âm đại diện
-        let lunarOf1 = getLunarDate(1, month + 1, year);
-        let lunarOf15 = getLunarDate(15, month + 1, year);
-        // Dùng ngày 15 để lấy tháng âm chính của tháng dương
-        lunarHeader.innerHTML =
-            `Tháng ${lunarOf15[1]} âm lịch &nbsp;·&nbsp; Năm ${canChi(lunarOf15[2])}`;
+        const rawFirstDay = new Date(year, month, 1).getDay();
+        const firstCol = (rawFirstDay === 0) ? 6 : rawFirstDay - 1;
+        const lastDate = new Date(year, month + 1, 0).getDate();
+        daysContainer.innerHTML = '';
  
-        // Thứ của ngày 1 (0=CN ... 6=T7)
-        // Lịch bắt đầu từ T2 => T2=0, T3=1, ..., T7=5, CN=6
-        let rawFirstDay = new Date(year, month, 1).getDay(); // 0=CN
-        let firstCol    = (rawFirstDay === 0) ? 6 : rawFirstDay - 1; // đổi sang T2-based
+        if (!selectedDate || !selectedDate.startsWith(`${year}-${String(month + 1).padStart(2, '0')}`)) {
+            selectedDate = formatISODate(year, month + 1, 1);
+        }
  
-        let lastDate = new Date(year, month + 1, 0).getDate();
- 
-        daysContainer.innerHTML = "";
- 
-        // Ô trống đầu
-        for (let i = 0; i < firstCol; i++)
+        for (let i = 0; i < firstCol; i++) {
             daysContainer.innerHTML += `<div class="day-cell empty"></div>`;
+        }
  
-        let today = new Date();
- 
+        const today = new Date();
         for (let i = 1; i <= lastDate; i++) {
-            let isToday = (i === today.getDate() && month === today.getMonth() && year === today.getFullYear());
- 
-            let lunar     = getLunarDate(i, month + 1, year);
-            let lDay      = lunar[0], lMonth = lunar[1], lLeap = lunar[3];
-            let isMung1   = (lDay === 1);
- 
-            let lunarText = isMung1
-                ? `1/${lMonth}${lLeap ? '<span class="leap-tag">n</span>' : ''}`
-                : `${lDay}`;
-            let lunarClass = isMung1 ? 'lunar-day lunar-first' : 'lunar-day';
- 
-            // CN = cột 6 (index 6) trong lưới T2-based
-            let colIndex     = (firstCol + i - 1) % 7;
-            let isCN         = (colIndex === 6);
-            let isSat        = (colIndex === 5);
-            let weekendClass = (isCN || isSat) ? " weekend" : "";
-            let cnClass      = isCN ? " is-cn" : "";
-            let todayClass   = isToday ? " today" : "";
+            const noteDate = formatISODate(year, month + 1, i);
+            const notes = getNotesByDate(noteDate);
+            const hasNotes = notes.length > 0;
+            const hasUnreadDue = notes.some(note => !note.read && isNoteDue(note));
+            const isToday = i === today.getDate() && month === today.getMonth() && year === today.getFullYear();
+            const lunar = getLunarDate(i, month + 1, year);
+            const lDay = lunar[0], lMonth = lunar[1], lLeap = lunar[3];
+            const isMung1 = lDay === 1;
+            const lunarText = isMung1 ? `1/${lMonth}${lLeap ? '<span class="leap-tag">n</span>' : ''}` : `${lDay}`;
+            const lunarClass = isMung1 ? 'lunar-day lunar-first' : 'lunar-day';
+            const colIndex = (firstCol + i - 1) % 7;
+            const isCN = colIndex === 6;
+            const isSat = colIndex === 5;
+            const weekendClass = (isCN || isSat) ? ' weekend' : '';
+            const cnClass = isCN ? ' is-cn' : '';
+            const todayClass = isToday ? ' today' : '';
+            const activeClass = selectedDate === noteDate ? ' active' : '';
+            const noteDot = hasNotes ? `<span class="note-dot ${hasUnreadDue ? 'note-dot-unread' : 'note-dot-read'}" title="${hasUnreadDue ? 'Có thông báo chưa đọc' : 'Có ghi chú'}"></span>` : '';
  
             daysContainer.innerHTML += `
-                <div class="day-cell${todayClass}${weekendClass}${cnClass}">
+                <div class="day-cell${todayClass}${weekendClass}${cnClass}${activeClass}" data-date="${noteDate}">
                     <span class="solar-day">${i}</span>
                     <span class="${lunarClass}">${lunarText}</span>
+                    ${noteDot}
                 </div>`;
         }
+ 
+        document.querySelectorAll('.day-cell:not(.empty)').forEach(cell => {
+            cell.addEventListener('click', () => {
+                const date = cell.getAttribute('data-date');
+                if (selectedDate === date) {
+                    openNoteModal();
+                } else {
+                    setSelectedDate(date);
+                }
+            });
+        });
     }
+ 
+ 
+    function openNoteModal(note = null) {
+        const modal = document.getElementById('noteModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const noteId = document.getElementById('noteId');
+        const noteTitle = document.getElementById('noteTitle');
+        const noteDesc = document.getElementById('noteDesc');
+        const noteTime = document.getElementById('noteTime');
+        const noteNotifyTime = document.getElementById('noteNotifyTime');
+ 
+        if (note) {
+            modalTitle.textContent = 'Chỉnh sửa ghi chú';
+            noteId.value = note.id;
+            noteTitle.value = note.title;
+            noteDesc.value = note.description;
+            noteTime.value = note.time || '09:00';
+            noteNotifyTime.value = note.notifyTime || note.time || '09:00';
+        } else {
+            modalTitle.textContent = 'Thêm ghi chú';
+            noteId.value = '';
+            noteTitle.value = '';
+            noteDesc.value = '';
+            noteTime.value = '09:00';
+            noteNotifyTime.value = '09:00';
+        }
+ 
+        modal.classList.add('open');
+    }
+ 
+    function closeNoteModal() {
+        document.getElementById('noteModal').classList.remove('open');
+    }
+ 
+    function editNote(id) {
+        const notes = loadNotes();
+        const note = notes.find(item => item.id === id);
+        if (!note) return;
+        setSelectedDate(note.date);
+        openNoteModal(note);
+    }
+ 
+    function deleteNote(id) {
+        const notes = loadNotes().filter(item => item.id !== id);
+        saveNotes(notes);
+        renderCalendar();
+    }
+ 
+    document.getElementById('cancelNoteBtn').addEventListener('click', closeNoteModal);
+ 
+    document.getElementById('noteForm').addEventListener('submit', function (event) {
+        event.preventDefault();
+        const noteId = document.getElementById('noteId').value;
+        const title = document.getElementById('noteTitle').value.trim();
+        const description = document.getElementById('noteDesc').value.trim();
+        const time = document.getElementById('noteTime').value;
+        const notifyTime = document.getElementById('noteNotifyTime').value;
+        const notes = loadNotes();
+ 
+        if (noteId) {
+            const index = notes.findIndex(note => note.id === noteId);
+            if (index !== -1) {
+                notes[index].title = title;
+                notes[index].description = description;
+                notes[index].time = time;
+                notes[index].notifyTime = notifyTime;
+                notes[index].updatedAt = Date.now();
+            }
+        } else {
+            notes.push({
+                id: String(Date.now()) + Math.random().toString(16).slice(2),
+                date: selectedDate,
+                title,
+                description,
+                time,
+                notifyTime,
+                createdAt: Date.now(),
+                updatedAt: Date.now(),
+                read: false
+            });
+        }
+ 
+        saveNotes(notes);
+        closeNoteModal();
+        renderCalendar();
+    });
+ 
+    document.getElementById('noteModal').addEventListener('click', function(event) {
+        if (event.target.classList.contains('note-modal') || event.target.classList.contains('note-modal-backdrop')) {
+            closeNoteModal();
+        }
+    });
  
     function prevMonth() { currentDate.setMonth(currentDate.getMonth() - 1); renderCalendar(); }
     function nextMonth() { currentDate.setMonth(currentDate.getMonth() + 1); renderCalendar(); }
+ 
     renderCalendar();
 </script>

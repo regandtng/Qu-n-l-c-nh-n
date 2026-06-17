@@ -11,6 +11,9 @@
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark-mode');
         }
+        if (localStorage.getItem('sidebar') === 'collapsed') {
+            document.documentElement.classList.add('sidebar-collapsed');
+        }
     </script>
 </head>
 <body>
@@ -131,6 +134,7 @@
     function toggleSidebar() {
         const sidebar = document.getElementById('sidebar');
         const isCollapsed = sidebar.classList.toggle('collapsed');
+        document.documentElement.classList.toggle('sidebar-collapsed', isCollapsed);
         localStorage.setItem('sidebar', isCollapsed ? 'collapsed' : 'open');
         updateSidebarIcon(isCollapsed);
     }
@@ -149,6 +153,7 @@
             const sidebar = document.getElementById('sidebar');
             if (sidebar) {
                 sidebar.classList.add('collapsed');
+                document.documentElement.classList.add('sidebar-collapsed');
                 updateSidebarIcon(true);
             }
         }

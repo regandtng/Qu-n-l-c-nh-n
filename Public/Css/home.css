@@ -470,12 +470,15 @@ html.dark-mode .theme-toggle-btn:hover {
  
 /* Ẩn text khi collapsed */
 .infor.collapsed .menu-text,
-.infor.collapsed #themeLabel {
+.infor.collapsed #themeLabel,
+html.sidebar-collapsed .menu-text,
+html.sidebar-collapsed #themeLabel {
     display: none !important;
 }
  
 /* Căn icon vào giữa */
-.infor.collapsed .infor-menu li {
+.infor.collapsed .infor-menu li,
+html.sidebar-collapsed .infor-menu li {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;

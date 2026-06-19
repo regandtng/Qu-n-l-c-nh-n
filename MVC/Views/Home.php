@@ -11,9 +11,6 @@
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.add('dark-mode');
         }
-        if (localStorage.getItem('sidebar') === 'collapsed') {
-            document.documentElement.classList.add('sidebar-collapsed');
-        }
     </script>
 </head>
 <body>
@@ -34,10 +31,11 @@
         <div class="content">
             <div class="infor" id="sidebar" style="display:flex; flex-direction:column;">
  
-                <!-- Nút thu/mở sidebar -->
-                <button class="sidebar-toggle" onclick="toggleSidebar()" id="sidebarToggle">
-                    <i class="fa-solid fa-chevron-left" id="sidebarIcon"></i>
-                </button>
+                <div class="sidebar-toggle-wrap">
+                    <button class="sidebar-toggle" onclick="toggleSidebar()" id="sidebarToggle">
+                        <i class="fa-solid fa-chevron-left" id="sidebarIcon"></i>
+                    </button>
+                </div>
  
                 <ul class="infor-menu">
                     <li><a href="/Test/index.php?controller=HomeController&action=personal">
@@ -145,19 +143,25 @@
         icon.className = isCollapsed ? 'fa-solid fa-chevron-right' : 'fa-solid fa-chevron-left';
     }
  
-    // ── Khởi tạo khi load trang ────────────────────────────
-    document.addEventListener('DOMContentLoaded', function () {
+    function initializeSidebarState() {
         updateThemeBtn(document.documentElement.classList.contains('dark-mode'));
- 
-        if (localStorage.getItem('sidebar') === 'collapsed') {
-            const sidebar = document.getElementById('sidebar');
-            if (sidebar) {
+        const sidebar = document.getElementById('sidebar');
+        if (sidebar) {
+            if (localStorage.getItem('sidebar') === 'collapsed') {
                 sidebar.classList.add('collapsed');
                 document.documentElement.classList.add('sidebar-collapsed');
                 updateSidebarIcon(true);
+            } else {
+                // Đảm bảo sidebar không bị collapsed nếu không được lưu
+                sidebar.classList.remove('collapsed');
+                document.documentElement.classList.remove('sidebar-collapsed');
+                updateSidebarIcon(false);
             }
         }
         updateNotificationBadge();
-    });
+    }
+ 
+    // ── Khởi tạo khi load trang ────────────────────────────
+    document.addEventListener('DOMContentLoaded', initializeSidebarState);
 </script>
 </html>
